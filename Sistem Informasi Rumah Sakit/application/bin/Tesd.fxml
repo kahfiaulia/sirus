@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0">
+      <children>
+            <ImageView fitHeight="128.0" fitWidth="208.0" layoutX="225.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="191.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="224.90098571777344" AnchorPane.topAnchor="64.0">
+               <image>
+                  <Image url="@Logo-Stella-Maris-300x202.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <Button fx:id="tombolLogin" layoutX="283.0" layoutY="306.0" mnemonicParsing="false" onAction="#Login" prefHeight="25.0" prefWidth="75.0" text="Masuk" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="282.0" AnchorPane.topAnchor="306.0" />
+            <TextField fx:id="txtUsername" layoutX="91.0" layoutY="225.0" prefHeight="25.0" prefWidth="452.0" promptText="Username" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="101.0" AnchorPane.topAnchor="225.0" />
+            <PasswordField id="password" fx:id="txtPassword" layoutX="92.0" layoutY="263.0" prefHeight="25.0" prefWidth="452.0" promptText="Password" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="263.0" />
+            <Label alignment="CENTER" layoutX="-2.0" prefHeight="51.0" prefWidth="640.0" text="Sistem Informasi Rumah Sakit Terpadu" textAlignment="JUSTIFY" AnchorPane.bottomAnchor="325.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStatus" alignment="CENTER" layoutX="4.0" layoutY="356.0" prefHeight="25.0" prefWidth="640.0" text="STATUS" textFill="#dd0606" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="356.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

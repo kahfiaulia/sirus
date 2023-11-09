@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController2">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+<AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="700.0" prefWidth="1400.0">
+  <children>
+            <ImageView fitHeight="654.0" fitWidth="1398.0">
+               <image>
+                  <Image url="@gejala-kanker-usus-besar-biasanya-dimulai-dari-gangguan-bab-jawapos-com.jpg" />
+               </image>
+            </ImageView>
+    <Label alignment="CENTER" layoutX="122.0" layoutY="3.0" prefHeight="27.0" prefWidth="344.0" text="Data Pasien" textAlignment="CENTER" textFill="WHITE" wrapText="false">
+               <font>
+                  <Font size="31.0" fx:id="x6" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCari" layoutX="104.0" layoutY="68.0" prefHeight="34.0" prefWidth="371.0" promptText="Cari Pasien" />
+            <Button fx:id="btnCari" layoutX="466.0" layoutY="60.0" mnemonicParsing="false" onAction="#Cari" prefHeight="46.0" prefWidth="67.0" style="-fx-background-color: transparent;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="48.0">
+                     <image>
+                        <Image url="@icon/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <TableView fx:id="tblPasien" editable="true" layoutX="66.0" layoutY="156.0" prefHeight="469.0" prefWidth="1286.0" style="-fx-background-color: white;" tableMenuButtonVisible="true">
+              <columns>
+				<TableColumn fx:id="nomor" prefWidth="61.666664123535156" resizable="false" style="-fx-background-color: #48c8ff; -fx-color: snow;" text="Nomor" />
+                <TableColumn fx:id="nama" prefWidth="164.99996948242188" resizable="false" style="-fx-background-color: #48c8ff; -fx-color: snow;" text="Nama" />
+                <TableColumn fx:id="jenisKelamin" prefWidth="111.66665649414062" resizable="false" style="-fx-background-color: #48c8ff; -fx-color: snow;" text="Jenis Kelamin" />
+                <TableColumn fx:id="usia" prefWidth="50.333343505859375" resizable="false" style="-fx-background-color: #48c8ff; -fx-color: snow;" text="Usia" />
+                <TableColumn fx:id="ruang" prefWidth="124.33331298828125" resizable="false" style="-fx-background-color: #48c8ff; -fx-color: snow;" text="Ruang Pasien" />
+                <TableColumn fx:id="penyakit" prefWidth="86.33331298828125" resizable="false" style="-fx-background-color: #48c8ff; -fx-color: snow;" text="Penyakit" />
+                <TableColumn fx:id="dokter" prefWidth="156.0" resizable="false" style="-fx-background-color: #48c8ff; -fx-color: snow;" text="Dokter/Bidan" />
+                <TableColumn fx:id="masuk" prefWidth="138.0" resizable="false" style="-fx-background-color: #48c8ff; -fx-color: snow;" text="Tanggal Masuk" />
+                  <TableColumn fx:id="masuk1" prefWidth="161.33331298828125" resizable="false" style="-fx-background-color: #48c8ff; -fx-color: snow;" text="Tanggal Keluar" />
+                  <TableColumn fx:id="masuk11" prefWidth="246.3333740234375" resizable="false" style="-fx-background-color: #48c8ff; -fx-color: snow;" text="Biaya" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnLogout" layoutX="1238.0" layoutY="22.0" mnemonicParsing="false" onAction="#Logout" style="-fx-background-color: transparent;" text="logout" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@icon/baseline_exit_to_app_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnRefresh" layoutX="1234.0" layoutY="102.0" mnemonicParsing="false" onAction="#Refresh" style="-fx-background-color: transparent;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@icon/baseline_cached_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <JFXButton layoutX="140.0" layoutY="112.0" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: transparent;" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="47.0">
+                     <image>
+                        <Image url="@icon/baseline_add_box_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton layoutX="262.0" layoutY="114.0" prefHeight="37.0" prefWidth="61.0" style="-fx-background-color: transparent;" text="Button" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="36.0">
+                     <image>
+                        <Image url="@icon/baseline_delete_sweep_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="212.0" layoutY="110.0" prefHeight="48.0" prefWidth="71.0" style="-fx-background-color: transparent;" text=" " textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="36.0">
+                     <image>
+                        <Image url="@icon/baseline_create_black_18dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+  </children>
+</AnchorPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Sistem Informasi Rumah Sakit Terpadu 2019" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" text="Online" textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>

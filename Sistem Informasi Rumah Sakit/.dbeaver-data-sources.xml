@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mysql8-16a07dc627b-1bc184535d80c19a" provider="mysql" driver="mysql8" name="MySQL 8+ - localhost" save-password="true" read-only="false">
+		<connection host="localhost" port="3306" server="" database="" url="jdbc:mysql://localhost:3306/" user="root" home="C:\Program Files\MySQL\MySQL Router 8.0" type="dev">
+			<property name="connectTimeout" value="20000"/>
+		</connection>
+		<virtual-meta-data>
+			<container name="model">
+				<container name="pasien">
+					<entity name="dokterdata">
+						<constraint name="PRIMARY" type="VIRTUAL KEY">
+							<attribute name="nama"/>
+						</constraint>
+					</entity>
+					<entity name="logindata">
+						<constraint name="PRIMARY" type="VIRTUAL KEY">
+							<attribute name="nama"/>
+							<attribute name="username"/>
+							<attribute name="password"/>
+						</constraint>
+					</entity>
+					<entity name="ruangdata">
+						<constraint name="PRIMARY" type="VIRTUAL KEY">
+							<attribute name="nomor"/>
+							<attribute name="ruang"/>
+						</constraint>
+					</entity>
+					<entity name="pasiendata">
+						<constraint name="PRIMARY" type="VIRTUAL KEY">
+							<attribute name="nomor"/>
+							<attribute name="nama"/>
+							<attribute name="jeniskelamin"/>
+							<attribute name="usia"/>
+							<attribute name="ruang"/>
+							<attribute name="penyakit"/>
+							<attribute name="dokter"/>
+							<attribute name="tanggalmasuk"/>
+							<attribute name="tanggalkeluar"/>
+							<attribute name="biaya"/>
+						</constraint>
+					</entity>
+				</container>
+			</container>
+		</virtual-meta-data>
+	</data-source>
+	<filters/>
+</data-sources>

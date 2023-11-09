@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="726.0" prefWidth="1400.0">
+      <children>
+            <ImageView fitHeight="714.0" fitWidth="1406.0" layoutX="-5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@93318de9c43d08330b0333b4c61d6a79@2x.jpg" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="637.0" layoutX="698.0" layoutY="39.0" opacity="0.85" stroke="WHITE" strokeType="INSIDE" width="646.0" />
+            <Label alignment="CENTER" layoutX="699.0" layoutY="49.0" prefHeight="76.0" prefWidth="646.0" text="Sistem Informasi Rumah Sakit Terpadu" textAlignment="JUSTIFY">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="76.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Logo-Stella-Maris-300x202.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="lblStatus" alignment="CENTER" layoutX="699.0" layoutY="649.0" prefHeight="27.0" prefWidth="646.0" text="STATUS" textFill="#dd0606">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="750.0" layoutY="419.0" prefHeight="36.0" prefWidth="552.0" promptText="Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXTextField fx:id="txtUsername" labelFloat="true" layoutX="750.0" layoutY="339.0" prefHeight="37.0" prefWidth="552.0" promptText="Username" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" defaultButton="true" layoutX="985.0" layoutY="518.0" onAction="#Login" prefHeight="36.0" prefWidth="83.0" ripplerFill="#0009ff" style="-fx-background-color: #1a73e8;" text="Masuk" textFill="WHITE" />
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="927.0" layoutY="125.0">
+               <image>
+                  <Image url="@kisspng-login-google-account-computer-icons-user-activity-5ac6bbe74aa7f1.6157264215229736713058.png" />
+               </image>
+            </ImageView>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
